@@ -48,7 +48,10 @@ Desain ini memadukan **"Premium Modern Minimalist"** dengan **"Trendy Y2K K-Pop 
 Aplikasi ini sudah dikonfigurasi dengan sistem multi-role menggunakan database tabel yang sama (\users\):
 - **User Dashboard**: Terletak di route \/dashboard\. Untuk user reguler/pembeli.
 - **Admin Dashboard**: Terletak di route \/admin/dashboard\. Dilindungi oleh *Admin Middleware*.
-> **Penting**: Saat melakukan proses Login, sistem akan **secara otomatis mengarahkan** pengguna ke halaman (dashboard) yang sesuai dengan isi kolom \ole\ pada databasenya masing-masing (\dmin\ atau \user\). Semua controller dan tampilan UI (Blade views) sudah dipisah ke dalam foldernya masing-masing (\esources/views/admin/\ dan \esources/views/user/\).
+> **Penting**: Saat melakukan proses Login, sistem akan **secara otomatis mengarahkan** pengguna ke halaman (dashboard) yang sesuai dengan isi kolom \
+ole\ pada databasenya masing-masing (\dmin\ atau \user\). Semua controller dan tampilan UI (Blade views) sudah dipisah ke dalam foldernya masing-masing (\
+esources/views/admin/\ dan \
+esources/views/user/\).
 
 ---
 
@@ -115,7 +118,7 @@ npm run build
 
 ### 5. Jalankan Server Lokal
 Terakhir, mulai jalankan server dasar bawaan Laravel:
-\\\ash
+\\\
 php artisan serve
 \\\
 Lalu buka website di browser Anda melalui alamat: **\http://127.0.0.1:8000\**.
