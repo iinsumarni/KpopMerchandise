@@ -69,22 +69,22 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek "Kpop Pocket" di komputer
 
 ### 1. Kloning & Instal Dependensi (Library)
 Buka terminal Anda dan pastikan Anda berada di dalam folder proyek:
-\\\ash
+
 # Instal dependensi PHP
 composer install
 
 # Instal dependensi Javascript/CSS
 npm install
-\\\
+
 
 ### 2. Konfigurasi Environment (Lingkungan)
 Salin file environment standar dan buat kunci aplikasi (app key) baru:
-\\\ash
+
 cp .env.example .env
 # Jika menggunakan Windows PowerShell: copy .env.example .env
 
 php artisan key:generate
-\\\
+
 
 Pastikan untuk menyesuaikan file \.env\ Anda agar terhubung dengan database MySQL lokal Anda:
 \\\env
@@ -94,33 +94,33 @@ DB_PORT=3306
 DB_DATABASE=kpop_pocket
 DB_USERNAME=root
 DB_PASSWORD=
-\\\
+
 
 ### 3. Migrasi Database & Seeding Data
 Pastikan server MySQL Anda (Bisa melalui XAMPP/Laragon/DBngin) sedang menyala. Buatlah database baru secara manual dengan nama \kpop_pocket\.
 Setelah itu, jalankan perintah migrasi untuk merakit semua tabel secara otomatis:
-\\\ash
+
 php artisan migrate
 
 # Jika Anda memiliki data dummy (seeder), Anda dapat menjalankan:
 php artisan db:seed
-\\\
+
 
 ### 4. Build Aset Frontend
 Lakukan kompilasi kerangka Tailwind CSS dan Javascript menggunakan *Vite*:
-\\\ash
+
 # Untuk keperluan development (Live reload/Hot-module)
 npm run dev
 
 # Membangun file yang siap dilepas ke tahap produksi (Minified)
 npm run build
-\\\
+
 
 ### 5. Jalankan Server Lokal
 Terakhir, mulai jalankan server dasar bawaan Laravel:
-\\\
+
 php artisan serve
-\\\
+
 Lalu buka website di browser Anda melalui alamat: **\http://127.0.0.1:8000\**.
 
 ---
