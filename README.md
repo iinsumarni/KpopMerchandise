@@ -14,76 +14,76 @@
 
 <br>
 
-## 🎨 Aesthetic & Design System
+## 🎨 Estetika & Sistem Desain
 
-The design blends **"Premium Modern Minimalist"** with **"Trendy Y2K K-Pop Vibes"** (urban, cool, and highly aesthetic), targeting Gen-Z and Millennials.
+Desain ini memadukan **"Premium Modern Minimalist"** dengan **"Trendy Y2K K-Pop Vibes"** (tema urban, keren, dan sangat estetis), yang ditargetkan untuk kalangan Gen-Z dan Milenial.
 
-- **UI Style**: Soft-Glassmorphism (frosted glass effects, background blur), deep depth perception, and bento-box grid layouts.
-- **Shapes**: Smooth, heavily rounded corners (24px for cards, full-pill for buttons).
-- **Themes**: Fully supported **Dark Mode** and **Light Mode**.
-- **Colors**: No green for success states. Uses custom electric purple, soft neon pink, or warm orange instead.
-  - **Dark Mode**: Background #0B0B0F, Card #14141B, Primary Pink #FF4FA3.
-  - **Light Mode**: Background #FFF7FB, Card #FFFFFF, Primary Pink #FF5CA8.
+- **Gaya UI (UI Style)**: *Soft-Glassmorphism* (efek kaca buram, latar belakang blur), menonjolkan kedalaman dimensi, dan tata letak dengan pola *bento-box grid*.
+- **Bentuk (Shapes)**: Sudut melengkung yang halus (24px untuk bentuk kartu, pil penuh/oval untuk tombol).
+- **Tema (Themes)**: Mendukung penuh **Mode Gelap (Dark Mode)** dan **Mode Terang (Light Mode)** di setiap halaman.
+- **Warna**: APLIKASI INI MENGHINDARI penggunaan warna hijau untuk elemen penanda sukses (*success states*). Sebagai gantinya, menggunakan warna khusus seperti ungu elektrik, merah muda (*soft neon pink*), atau oranye hangat.
+  - **Mode Gelap**: Latar Belakang #0B0B0F, Kartu #14141B, Pink Utama #FF4FA3.
+  - **Mode Terang**: Latar Belakang #FFF7FB, Kartu #FFFFFF, Pink Utama #FF5CA8.
 
-## 🚀 Features
+## 🚀 Fitur Utama
 
-### Public & User Features
-- **Immersive Homepage**: Edge-to-edge Hero Banner, Bento Grid promotional sections, Category cards with hover animations, and horizontal scrolling for products.
-- **Product Catalog & Detail**: Supports pre-orders, various product badges (Trending, Hot, Popular), and Instagram-style image galleries.
-- **Smart Shopping Cart**: Selectable checkout items (Select individually/Select All), dynamic subtotal updates.
-- **Checkout Stepper**: Minimalist address, shipping, and payment selection (E-wallet, Bank Transfer, QRIS).
-- **User Dashboard**: Profile management, track orders, reviews, and wishlist.
-- **Newsletter**: Aesthetic subscribe block.
+### Fitur Publik & Pengguna Biasa
+- **Beranda Imersif**: *Hero Banner* selebar layar, bagian promosi dengan format *Bento Grid*, kartu kategori dengan efek animasi melayang (*hover*), dan produk yang dapat digeser menyamping (*horizontal scrolling*).
+- **Katalog & Detail Produk**: Mendukung fitur *pre-order*, berbagai label produk (*Trending*, *Hot*, *Popular*), dan galeri gambar bergaya Instagram.
+- **Keranjang Belanja Pintar**: Item yang akan di-*checkout* bisa dicentang dan dipilih secara independen (Pilih per item / Pilih Semua), dan *subtotal* harga terbarui secara otomatis.
+- **Tahapan Checkout (Stepper)**: Menggunakan alur *checkout* minimalis mulai dari Alamat > Pengiriman > Pembayaran (Mendukung E-wallet, Transfer Bank, QRIS).
+- **Dashboard Pengguna**: Fitur manajemen profil pengguna, pelacakan pesanan, pemberian ulasan, dan *wishlist* (daftar keinginan).
+- **Newsletter**: Menyediakan blok *subscribe* yang estetis untuk menerima pembaruan produk.
 
-### Admin Dashboard
-- **Analytics Overview**: Bento-style stat cards with charts (revenue, orders, products, customers).
-- **Product Management**: Manage catalog, stock, pre-order ETAs, and categories.
-- **Order Management**: Process shipments and verify payments.
-- **Clean UI**: Borderless tables, floating sidebar, glass effect, and drag-and-drop zones for image uploads.
-
----
-
-## � Authentication & Roles Management
-
-Aplikasi ini sudah dikonfigurasi dengan sistem multi-role menggunakan database tabel yang sama (`users`):
-- **User Dashboard**: Terletak di route `/dashboard`. Untuk user reguler/pembeli.
-- **Admin Dashboard**: Terletak di route `/admin/dashboard`. Dilindungi oleh *Admin Middleware*.
-> **Penting**: Saat melakukan proses Login, sistem akan **secara otomatis mengarahkan** pengguna ke halaman (dashboard) yang sesuai dengan isi kolom `role` pada databasenya masing-masing (`admin` atau `user`). Semua controller dan tampilan UI (Blade views) sudah dipisah ke dalam foldernya masing-masing (`resources/views/admin/` dan `resources/views/user/`).
+### Dashboard Admin
+- **Ringkasan Analitik**: Kartu statistik keren berbentuk kotak *bento* dengan grafik bawaan (Mencakup Total Pendapatan, Pesanan, Produk, dan Pelanggan).
+- **Manajemen Produk**: Mengontrol katalog, jumlah stok, *Update* ETA (Estimasi kedatangan barang *pre-order*), serta pengaturan kategori produk.
+- **Manajemen Pesanan**: Memproses pengiriman barang dan melakukan verifikasi pembayaran pelanggan.
+- **Antarmuka (UI) Bersih**: Tabel tanpa garis batas (*borderless*), *sidebar* melayang (*floating*), efek tembus pandang, dan area unggah gambar (*drag-and-drop*).
 
 ---
 
-## �🛠️ Requirements
+## 🔐 Otentikasi & Manajemen Hak Akses (Roles)
+
+Aplikasi ini sudah dikonfigurasi dengan sistem multi-role menggunakan database tabel yang sama (\users\):
+- **User Dashboard**: Terletak di route \/dashboard\. Untuk user reguler/pembeli.
+- **Admin Dashboard**: Terletak di route \/admin/dashboard\. Dilindungi oleh *Admin Middleware*.
+> **Penting**: Saat melakukan proses Login, sistem akan **secara otomatis mengarahkan** pengguna ke halaman (dashboard) yang sesuai dengan isi kolom \ole\ pada databasenya masing-masing (\dmin\ atau \user\). Semua controller dan tampilan UI (Blade views) sudah dipisah ke dalam foldernya masing-masing (\esources/views/admin/\ dan \esources/views/user/\).
+
+---
+
+## 🛠️ Persyaratan Sistem (Requirements)
 - PHP ^8.2
 - Composer
 - Node.js & NPM
-- MySQL
+- MySQL Database
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Instalasi & Pengaturan Tuntunan (Setup)
 
-Follow these steps to run the "Kpop Pocket" project locally:
+Ikuti langkah-langkah berikut untuk menjalankan proyek "Kpop Pocket" di komputer / laptop Anda (Lingkungan Lokal):
 
-### 1. Clone & Setup Dependencies
-Open your terminal and make sure you are in the project folder:
+### 1. Kloning & Instal Dependensi (Library)
+Buka terminal Anda dan pastikan Anda berada di dalam folder proyek:
 \\\ash
-# Install PHP dependencies
+# Instal dependensi PHP
 composer install
 
-# Install Javascript/CSS dependencies
+# Instal dependensi Javascript/CSS
 npm install
 \\\
 
-### 2. Environment Configuration
-Copy the default environment file and generate a new app key:
+### 2. Konfigurasi Environment (Lingkungan)
+Salin file environment standar dan buat kunci aplikasi (app key) baru:
 \\\ash
 cp .env.example .env
-# or on Windows PowerShell: copy .env.example .env
+# Jika menggunakan Windows PowerShell: copy .env.example .env
 
 php artisan key:generate
 \\\
 
-Make sure to configure your .env file to connect to your local MySQL database:
+Pastikan untuk menyesuaikan file \.env\ Anda agar terhubung dengan database MySQL lokal Anda:
 \\\env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -93,43 +93,43 @@ DB_USERNAME=root
 DB_PASSWORD=
 \\\
 
-### 3. Database Migration & Seeding
-Ensure your MySQL server (via XAMPP/Laragon/DBngin) is running. Create a database named \kpop_pocket\.
-Then run the migrations to set up all tables:
+### 3. Migrasi Database & Seeding Data
+Pastikan server MySQL Anda (Bisa melalui XAMPP/Laragon/DBngin) sedang menyala. Buatlah database baru secara manual dengan nama \kpop_pocket\.
+Setelah itu, jalankan perintah migrasi untuk merakit semua tabel secara otomatis:
 \\\ash
 php artisan migrate
 
-# If you have dummy data configured, you can run:
+# Jika Anda memiliki data dummy (seeder), Anda dapat menjalankan:
 php artisan db:seed
 \\\
 
-### 4. Build Frontend Assets
-Compile the Tailwind CSS and JS assets using Vite:
+### 4. Build Aset Frontend
+Lakukan kompilasi kerangka Tailwind CSS dan Javascript menggunakan *Vite*:
 \\\ash
-# For development (hot-module replacement)
+# Untuk keperluan development (Live reload/Hot-module)
 npm run dev
 
-# For production (builds minified assets)
+# Membangun file yang siap dilepas ke tahap produksi (Minified)
 npm run build
 \\\
 
-### 5. Run the Local Server
-Finally, start the Laravel built-in server:
+### 5. Jalankan Server Lokal
+Terakhir, mulai jalankan server dasar bawaan Laravel:
 \\\ash
 php artisan serve
 \\\
-Visit **\http://127.0.0.1:8000\** in your browser.
+Lalu buka website di browser Anda melalui alamat: **\http://127.0.0.1:8000\**.
 
 ---
 
-## 📁 Database Architecture Overview
-- **Users**: Handles admin & user roles, avatar, and phone.
-- **Categories & Groups**: For categorizing merch and K-pop groups.
-- **Products & Product Images**: Stores items, stock, pre-order status, base price, and badges.
-- **Carts**: Powers the smart selective checkout feature.
-- **Orders, Order Items, Shipments, Payments**: Full checkout to delivery pipeline.
-- **Reviews**: Customer product feedback with admin approval.
-- **Wishlists & Newsletters**: User engagement features.
+## 📁 Ringkasan Arsitektur Database
+- **Users**: Mengelola data admin & data pelanggan, status peran (role), avatar, serta nomor telepon.
+- **Categories & Groups**: Mengatur kategori jenis *merchandise* dan direktori grup K-pop.
+- **Products & Product Images**: Menyimpan barang, ketersediaan stok, status *pre-order*, informasi harga dasar, dan aneka lencana (badge) promosi.
+- **Carts (Keranjang)**: Mesin utama yang mendukung fitur *Smart Selective Checkout* (Pilih sebagian barang).
+- **Orders, Order Items, Shipments, Payments**: Alur pipa (Pipeline) lengkap mulai dari transaksi, pembayaran, hingga pengiriman.
+- **Reviews**: Arsip *feedback* produk dari pelanggan (Wajib lolos persetujuan Admin).
+- **Wishlists & Newsletters**: Pelengkap fitur pelibatan pelanggan (*User engagement*).
 
 ---
-*Built for the Modern K-Pop Community.* 🫰
+*Dibangun Sepenuh Hati untuk Komunitas K-Pop Modern.* 🫰
