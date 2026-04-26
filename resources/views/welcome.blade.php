@@ -1,4 +1,4 @@
-﻿<x-public-layout>
+﻿<x-app-layout>
     <main class="pt-32 pb-24 flex flex-col gap-xl">
         <!-- Hero Banner Slider -->
         <section class="relative w-full px-md max-w-[1600px] mx-auto min-h-[716px] flex items-center">
@@ -240,4 +240,5 @@
             </div>
         </section>
     </main>
-</x-public-layout>
+                        </x-app-layout>
+                        

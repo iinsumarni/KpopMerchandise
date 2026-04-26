@@ -6,15 +6,15 @@
         </div>
         <div class="flex items-center gap-6">
             <!-- Trailing Icons -->
-            <button aria-label="shopping_cart" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
+            <button aria-label="shopping_cart" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
                 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
             </button>
             
-            <a href="{{ route('login') }}" aria-label="person" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
+            <a href="{{ route('login') }}" aria-label="person" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
                 <span class="material-symbols-outlined" data-icon="person">person</span>
             </a>
             
-            <button aria-label="menu" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
+            <button aria-label="menu" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
                 <span class="material-symbols-outlined" data-icon="menu">menu</span>
             </button>
         </div>

@@ -18,7 +18,7 @@
                 Privacy
             </a>
         </nav>
-        <div class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-pink-500 dark:text-pink-400 opacity-80 hover:opacity-100 transition-opacity">
+        <div class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-pink-500 opacity-80 hover:opacity-100 transition-opacity">
             © {{ date('Y') }} KPOP POCKET. ALL RIGHTS RESERVED.
         </div>
     </div>

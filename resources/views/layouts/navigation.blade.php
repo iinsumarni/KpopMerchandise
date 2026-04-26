@@ -40,14 +40,11 @@
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
+        @csrf
+        <button type="submit" class="w-full text-left px-4 py-2">
+            LOGOUT FIX
+        </button>
+    </form>
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -86,14 +83,11 @@
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
+    @csrf
+    <button type="submit" class="w-full text-left px-4 py-2">
+        Log Out
+    </button>
+</form>
             </div>
         </div>
     </div>
