@@ -191,35 +191,7 @@
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-white">
-<!-- TopNavBar (Shared Component) -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl rounded-full border border-white/10 z-50 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-saturate-150">
-<div class="flex justify-between items-center px-8 py-3 w-full">
-<div class="text-2xl font-black italic tracking-tighter bg-gradient-to-r from-[#FF4FA3] to-purple-500 bg-clip-text text-transparent">
-                Kpop Pocket
-            </div>
-<div class="flex items-center gap-6">
-<!-- Trailing Icons -->
-@guest
-<a href="{{ route('login') }}" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:text-white transition-colors">Login</a>
-<a href="{{ route('register') }}" class="bg-gradient-to-r from-primary-container to-secondary-container text-white font-['Epilogue'] tracking-widest uppercase text-xs font-bold px-4 py-2 rounded-full hover:scale-105 transition-all">Sign Up</a>
-@endguest
-@auth
-<button aria-label="shopping_cart" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform flex items-center justify-center p-2 rounded-full">
-<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-</button>
-<a href="{{ route('profile.edit') }}" aria-label="person" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform flex items-center justify-center p-2 rounded-full">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-</a>
-<form method="POST" action="{{ route('logout') }}" class="inline">
-    @csrf
-    <button type="submit" aria-label="logout" class="text-pink-500 dark:text-pink-400 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform flex items-center justify-center p-2 rounded-full">
-    <span class="material-symbols-outlined" data-icon="logout">logout</span>
-    </button>
-</form>
-@endauth
-</div>
-</div>
-</nav>
+<x-public-nav />
 <main class="pt-32 pb-24 flex flex-col gap-xl">
 <!-- Hero Banner Slider -->
 <section class="relative w-full px-md max-w-[1600px] mx-auto min-h-[716px] flex items-center">
@@ -236,16 +208,16 @@
                         Exclusive photobooks, lightsticks, and holographic photocards straight from Seoul. Secure your bias before they sell out.
                     </p>
 @guest
-<a href="{{ route('login') }}" class="inline-block relative overflow-hidden bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-caps text-label-caps px-8 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-95 group shadow-[0_8px_32px_rgba(255,79,163,0.3)]">
+<a href="{{ route('login') }}" class="inline-block bg-gradient-to-r from-primary-container to-secondary-container font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(255,79,163,0.3)] relative overflow-hidden group">
 <span class="relative z-10">Shop Now</span>
 <!-- Holographic Shimmer Effect -->
-<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite] skew-x-12"></div>
+<div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
 </a>
 @else
-<button class="relative overflow-hidden bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-caps text-label-caps px-8 py-4 rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-95 group shadow-[0_8px_32px_rgba(255,79,163,0.3)]">
+<button class="inline-block bg-gradient-to-r from-primary-container to-secondary-container font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(255,79,163,0.3)] relative overflow-hidden group">
 <span class="relative z-10">Shop Now</span>
 <!-- Holographic Shimmer Effect -->
-<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite] skew-x-12"></div>
+<div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
 </button>
 @endguest
 </div>
@@ -485,29 +457,5 @@
 </div>
 </section>
 </main>
-<!-- Footer (Shared Component) -->
-<footer class="w-full border-t border-white/5 pt-20 pb-10 bg-slate-950/80 backdrop-blur-2xl shadow-[0_-20px_50px_-12px_rgba(255,79,163,0.1)] relative before:absolute before:top-0 before:left-0 before:w-full before:h-px before:bg-gradient-to-r before:from-transparent before:via-pink-500/20 before:to-transparent">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-8">
-<div class="text-lg font-bold text-white">
-                Kpop Pocket
-            </div>
-<nav class="flex flex-wrap justify-center gap-6">
-<a class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-slate-500 hover:text-pink-400 transition-colors duration-200 opacity-80 hover:opacity-100" href="#">
-                    Collections
-                </a>
-<a class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-slate-500 hover:text-pink-400 transition-colors duration-200 opacity-80 hover:opacity-100" href="#">
-                    World Tour
-                </a>
-<a class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-slate-500 hover:text-pink-400 transition-colors duration-200 opacity-80 hover:opacity-100" href="#">
-                    Shipping
-                </a>
-<a class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-slate-500 hover:text-pink-400 transition-colors duration-200 opacity-80 hover:opacity-100" href="#">
-                    Privacy
-                </a>
-</nav>
-<div class="font-['Epilogue'] text-xs tracking-[0.2em] uppercase text-pink-500 dark:text-pink-400 opacity-80 hover:opacity-100 transition-opacity">
-                © 2024 KPOP POCKET. ALL RIGHTS RESERVED.
-            </div>
-</div>
-</footer>
+<x-public-footer />
 </body></html>
