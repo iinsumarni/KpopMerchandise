@@ -14,6 +14,10 @@
 
 <br>
 
+## 📖 Deskripsi Project
+
+Kpop Pocket adalah sebuah aplikasi e-commerce modern yang dikhususkan untuk penjualan merchandise K-Pop. Dibangun menggunakan framework Laravel, aplikasi ini menawarkan pengalaman berbelanja yang estetis dan interaktif. Kpop Pocket dilengkapi dengan fitur lengkap mulai dari manajemen produk dengan dukungan Pre-Order, smart keranjang belanja yang memungkinkan checkout selektif, sistem Multi-Role untuk pengguna dan admin, hingga integrasi antarmuka yang mendukung Dark dan Light mode. Menargetkan basis penggemar K-Pop, aplikasi ini mengedepankan gaya desain yang premium, minimalis, dan sangat *trendy*.
+
 ## 🎨 Estetika & Sistem Desain
 
 Desain ini memadukan **"Premium Modern Minimalist"** dengan **"Trendy Y2K K-Pop Vibes"** (tema urban, keren, dan sangat estetis), yang ditargetkan untuk kalangan Gen-Z dan Milenial.
@@ -80,21 +84,14 @@ npm install
 ### 2. Konfigurasi Environment (Lingkungan)
 Salin file environment standar dan buat kunci aplikasi (app key) baru:
 
+```bash
 cp .env.example .env
 # Jika menggunakan Windows PowerShell: copy .env.example .env
 
 php artisan key:generate
+```
 
-
-Pastikan untuk menyesuaikan file \.env\ Anda agar terhubung dengan database MySQL lokal Anda:
-\\\env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=kpop_pocket
-DB_USERNAME=root
-DB_PASSWORD=
-
+Pastikan untuk menyesuaikan file `.env` Anda agar terhubung dengan database lokal dan layanan lainnya sesuai dengan konfigurasi di komputer masing-masing. (Untuk detail konfigurasi, lihat dokumentasi standar Laravel).
 
 ### 3. Migrasi Database & Seeding Data
 Pastikan server MySQL Anda (Bisa melalui XAMPP/Laragon/DBngin) sedang menyala. Buatlah database baru secara manual dengan nama \kpop_pocket\.
@@ -116,16 +113,52 @@ npm run dev
 npm run build
 
 
-### 5. Jalankan Server Lokal
-Terakhir, mulai jalankan server dasar bawaan Laravel:
-
-php artisan serve
-
-Lalu buka website di browser Anda melalui alamat: **\http://127.0.0.1:8000\**.
 
 ---
 
-## 📁 Ringkasan Arsitektur Database
+## 🚀 Cara Menjalankan Project (Run)
+
+Untuk menjalankan server pengembangan backend dan frontend secara bersamaan, jalankan perintah berikut di dua terminal terpisah:
+
+**Terminal 1 (Backend - Laravel):**
+```bash
+php artisan serve
+```
+
+**Terminal 2 (Frontend - Vite):**
+```bash
+npm run dev
+```
+
+Lalu buka website di browser Anda melalui alamat: **http://127.0.0.1:8000**.
+
+---
+
+## 💻 Cara Commit & Kolaborasi
+
+Jika Anda ingin menyimpan perubahan dan berkolaborasi dalam project ini, ikuti standar berikut:
+
+1. **Periksa Status File:**
+   ```bash
+   git status
+   ```
+2. **Tambahkan Perubahan:**
+   ```bash
+   git add .
+   ```
+3. **Commit Pesan:**
+   Pastikan pesan commit jelas dan mendeskripsikan perubahan (opsional dengan emoji atau standar conventional commit).
+   ```bash
+   git commit -m "Deskripsi singkat tentang perubahan"
+   ```
+4. **Push ke Repository Git:**
+   ```bash
+   git push origin main
+   ```
+
+---
+
+## �📁 Ringkasan Arsitektur Database
 - **Users**: Mengelola data admin & data pelanggan, status peran (role), avatar, serta nomor telepon.
 - **Categories & Groups**: Mengatur kategori jenis *merchandise* dan direktori grup K-pop.
 - **Products & Product Images**: Menyimpan barang, ketersediaan stok, status *pre-order*, informasi harga dasar, dan aneka lencana (badge) promosi.
