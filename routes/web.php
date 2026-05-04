@@ -20,3 +20,18 @@ Route::middleware('auth')->group(function () {
 
 // 🔐 AUTH (login, register, dll)
 require __DIR__.'/auth.php';
+
+//cart
+use App\Http\Controllers\CartController;
+
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index']);
+    Route::get('/cart/add/{id}', [CartController::class, 'add']);
+
+// quantity
+    Route::get('/cart/increase/{id}', [CartController::class, 'increase']);
+    Route::get('/cart/decrease/{id}', [CartController::class, 'decrease']);
+    Route::get('/cart/remove/{id}', [CartController::class, 'remove']);
+    Route::get('/cart/checkout', [CartController::class, 'checkout']);
+});
+

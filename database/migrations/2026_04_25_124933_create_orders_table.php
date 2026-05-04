@@ -7,25 +7,21 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     public function up(): void
-    {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('order_number', 50)->unique();
-            $table->enum('status', ['pending', 'processing', 'shipped', 'delivered', 'cancelled'])->default('pending');
-            $table->decimal('subtotal', 12, 2);
-            $table->decimal('shipping_cost', 10, 2)->default(0);
-            $table->decimal('total', 12, 2);
-            $table->string('shipping_name');
-            $table->string('shipping_phone', 20);
-            $table->text('shipping_address');
-            $table->string('shipping_city', 100);
-            $table->string('shipping_province', 100);
-            $table->string('shipping_postal', 10);
-            $table->text('notes')->nullable();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('orders', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+
+        // basic dulu (biar ga error)
+        $table->integer('total');
+
+        // optional (biar nanti bisa dikembangin)
+        $table->string('order_number')->nullable();
+        $table->string('status')->default('pending');
+
+        $table->timestamps();
+    });
+}
 
     public function down(): void
     {
