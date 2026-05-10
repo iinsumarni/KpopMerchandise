@@ -19,6 +19,10 @@ class AdminMiddleware
             return $next($request);
         }
 
-        return redirect('/dashboard')->with('error', 'You do not have admin access.');
+        if ($request->user()) {
+            return redirect('/')->with('error', 'You do not have admin access.');
+        }
+
+        return redirect()->route('admin.login')->with('error', 'Please log in as admin.');
     }
 }

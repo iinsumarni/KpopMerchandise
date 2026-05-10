@@ -1,33 +1,33 @@
-<!-- TopNavBar (Shared Component) -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl rounded-full border border-white/10 z-50 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-saturate-150">
+<!-- TopNavBar — Premium Dark Mode -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl rounded-full z-50 backdrop-blur-xl backdrop-saturate-150 transition-colors duration-300" style="background: rgba(15, 15, 18, 0.72); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
     <div class="flex justify-between items-center px-8 py-3 w-full">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
         </style>
-        <a href="/" class="text-3xl bg-gradient-to-r from-[#FF4FA3] to-purple-500 bg-clip-text text-transparent select-none pb-1" style="font-family: 'Pacifico', cursive; line-height: 1.2; letter-spacing: 1px;">
+        <a href="/" class="text-3xl bg-gradient-to-r from-[#FF2E93] to-[#FF5DB1] bg-clip-text text-transparent select-none pb-1" style="font-family: 'Pacifico', cursive; line-height: 1.2; letter-spacing: 1px;">
             Kpop Pocket
         </a>
         <div class="flex items-center gap-4">
             @guest
-                <a href="{{ route('login') }}" class="text-white font-['Epilogue'] tracking-widest uppercase text-xs font-bold px-4 py-2 hover:bg-white/10 rounded-full transition-colors">
+                <a href="{{ route('login') }}" class="font-['Inter'] tracking-wide uppercase text-xs font-semibold px-4 py-2 rounded-full transition-colors" style="color: #FFFFFF;">
                     Log In
                 </a>
-                <a href="{{ route('register') }}" class="bg-gradient-to-r from-[#FF4FA3] to-purple-500 text-white font-['Epilogue'] tracking-widest uppercase text-xs font-bold px-5 py-2 hover:scale-105 transition-transform duration-300 rounded-full shadow-[0_4px_16px_rgba(255,79,163,0.3)]">
+                <a href="{{ route('register') }}" class="text-white font-['Inter'] tracking-wide uppercase text-xs font-semibold px-5 py-2 rounded-full transition-transform duration-300 hover:scale-105" style="background: linear-gradient(135deg, #FF2E93, #FF5DB1); box-shadow: 0 4px 16px rgba(255,46,147,0.25);">
                     Sign Up
                 </a>
             @else
-                <!-- Trailing Icons -->
-                <button aria-label="shopping_cart" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
-                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-                </button>
-                
-                <a href="{{ route('profile.edit') }}" aria-label="person" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
-                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                <a href="/cart" aria-label="Cart" class="flex items-center justify-center p-2 rounded-full transition-all duration-300 hover:scale-105" style="color: #FF2E93;">
+                    <span class="material-symbols-outlined">shopping_cart</span>
                 </a>
-                
-                <button aria-label="menu" class="text-pink-500 font-['Epilogue'] tracking-widest uppercase text-xs font-bold hover:scale-105 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 flex items-center justify-center p-2 rounded-full">
-                    <span class="material-symbols-outlined" data-icon="menu">menu</span>
-                </button>
+                <a href="{{ route('profile.edit') }}" aria-label="Profile" class="flex items-center justify-center p-2 rounded-full transition-all duration-300 hover:scale-105" style="color: #FF2E93;">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <form method="POST" action="{{ route('logout') }}" class="m-0 p-0 flex">
+                    @csrf
+                    <button type="submit" aria-label="Logout" class="flex items-center justify-center p-2 rounded-full transition-all duration-300 hover:scale-105" style="color: #A0A0AB;">
+                        <span class="material-symbols-outlined">logout</span>
+                    </button>
+                </form>
             @endguest
         </div>
     </div>

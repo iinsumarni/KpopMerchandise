@@ -2,30 +2,30 @@
     @csrf
     @method('put')
 
-    <section class="glass-card rounded-3xl p-6 md:p-10 flex flex-col holo-glow transition-all duration-300">
+    <section style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.2);">
         <div class="flex items-center gap-4 mb-8">
-            <div class="p-3 rounded-2xl bg-on-secondary-fixed-variant/20 text-secondary">
-                <span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
+            <div style="padding: 12px; border-radius: 16px; background: rgba(255,46,147,0.15); color: #FF2E93;">
+                <span class="material-symbols-outlined">shield_lock</span>
             </div>
-            <h3 class="font-h3 text-h3 text-white">{{ __('Security') }}</h3>
+            <h3 style="font-size: 20px; font-weight: 700; color: #FFFFFF;">{{ __('Security') }}</h3>
         </div>
         
         <div class="space-y-4">
             <div class="space-y-2">
-                <x-input-label for="update_password_current_password" :value="__('Current Password')" class="font-label-caps text-label-caps text-on-surface-variant ml-4" />
-                <input id="update_password_current_password" name="current_password" type="password" class="w-full bg-white/5 border-none focus:ring-2 focus:ring-secondary-container rounded-full px-6 py-4 text-white transition-all" autocomplete="current-password" />
+                <label for="update_password_current_password" style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A0A0AB; margin-left: 4px;">{{ __('Current Password') }}</label>
+                <input id="update_password_current_password" name="current_password" type="password" style="width: 100%; background: rgba(255,255,255,0.02); border: 1.5px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 20px; font-size: 15px; color: #FFFFFF; font-family: 'Inter', sans-serif; outline: none; transition: all 0.3s;" onfocus="this.style.borderColor='#FF2E93'; this.style.boxShadow='0 0 0 4px rgba(255,46,147,0.12)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='none'" autocomplete="current-password" />
                 <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
             </div>
 
             <div class="space-y-2">
-                <x-input-label for="update_password_password" :value="__('New Password')" class="font-label-caps text-label-caps text-on-surface-variant ml-4" />
-                <input id="update_password_password" name="password" type="password" class="w-full bg-white/5 border-none focus:ring-2 focus:ring-secondary-container rounded-full px-6 py-4 text-white transition-all" autocomplete="new-password" />
+                <label for="update_password_password" style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A0A0AB; margin-left: 4px;">{{ __('New Password') }}</label>
+                <input id="update_password_password" name="password" type="password" style="width: 100%; background: rgba(255,255,255,0.02); border: 1.5px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 20px; font-size: 15px; color: #FFFFFF; font-family: 'Inter', sans-serif; outline: none; transition: all 0.3s;" onfocus="this.style.borderColor='#FF2E93'; this.style.boxShadow='0 0 0 4px rgba(255,46,147,0.12)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='none'" autocomplete="new-password" />
                 <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
             </div>
 
             <div class="space-y-2">
-                <x-input-label for="update_password_password_confirmation" :value="__('Confirm New Password')" class="font-label-caps text-label-caps text-on-surface-variant ml-4" />
-                <input id="update_password_password_confirmation" name="password_confirmation" type="password" class="w-full bg-white/5 border-none focus:ring-2 focus:ring-secondary-container rounded-full px-6 py-4 text-white transition-all" autocomplete="new-password" />
+                <label for="update_password_password_confirmation" style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A0A0AB; margin-left: 4px;">{{ __('Confirm New Password') }}</label>
+                <input id="update_password_password_confirmation" name="password_confirmation" type="password" style="width: 100%; background: rgba(255,255,255,0.02); border: 1.5px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 20px; font-size: 15px; color: #FFFFFF; font-family: 'Inter', sans-serif; outline: none; transition: all 0.3s;" onfocus="this.style.borderColor='#FF2E93'; this.style.boxShadow='0 0 0 4px rgba(255,46,147,0.12)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='none'" autocomplete="new-password" />
                 <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
             </div>
         </div>
@@ -33,13 +33,13 @@
         <div class="flex justify-between items-center mt-8">
             <div class="flex items-center gap-4">
                 @if (session('status') === 'password-updated')
-                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" class="text-sm text-tertiary-fixed font-bold">
+                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" style="font-size: 13px; font-weight: 600; color: #FF6F91;">
                         {{ __('Saved.') }}
                     </p>
                 @endif
             </div>
 
-            <button type="submit" class="border border-white/20 hover:border-secondary hover:text-secondary text-white font-bold py-4 px-8 rounded-full transition-all active:scale-95">
+            <button type="submit" style="background: rgba(255,255,255,0.04); color: #FF2E93; font-weight: 700; padding: 14px 28px; border-radius: 9999px; border: 1.5px solid rgba(255,255,255,0.08); cursor: pointer; font-size: 14px; transition: all 0.3s;" onmouseenter="this.style.borderColor='#FF2E93'; this.style.background='rgba(255,46,147,0.08)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.background='rgba(255,255,255,0.04)'">
                 {{ __('Change Password') }}
             </button>
         </div>

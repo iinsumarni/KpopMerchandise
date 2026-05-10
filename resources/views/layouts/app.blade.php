@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,9 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -36,18 +37,17 @@
         
         /* Holographic Shimmer Animation Base (Simulated with hover utilities below where needed, keeping CSS clean) */
         .glass-card {
-            background-color: rgba(42, 28, 32, 0.4); /* surface-container */
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(15, 15, 18, 0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
         }
         
         .holo-glow {
-            background: radial-gradient(circle at top right, rgba(255, 79, 163, 0.2), transparent 50%),
-                        radial-gradient(circle at bottom left, rgba(116, 1, 171, 0.15), transparent 50%);
+            background: linear-gradient(135deg, rgba(255,46,147,0.2), rgba(255,93,177,0.1));
         }
 
-        /* Hide scrollbar for horizontal scroll */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -57,13 +57,13 @@
         }
 
         .holo-glow-hover:hover {
-            box-shadow: 0 0 30px rgba(255, 79, 163, 0.2);
+            box-shadow: 0 0 30px rgba(255, 46, 147, 0.12);
             transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 241, 247, 0.5);
         }
 
         .primary-btn-gradient {
-            background: linear-gradient(135deg, #ff4fa3 0%, #7401ab 100%);
+            background: linear-gradient(135deg, #FF2E93 0%, #FF5DB1 100%);
             position: relative;
             overflow: hidden;
         }
@@ -74,7 +74,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
             transform: rotate(45deg);
             transition: 0.5s;
         }
@@ -225,7 +225,7 @@
         }
     </script>
     </head>
-    <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-white">
+    <body class="font-body-md antialiased" style="background-color: #0F0F12; color: #FFFFFF;">
         <x-public-nav />
         <div class="min-h-screen pt-32 pb-24 flex flex-col gap-xl relative">
 
