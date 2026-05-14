@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -237,19 +237,46 @@
 <p class="font-body-lg max-w-lg mb-4" style="color: var(--text-muted);">Exclusive photobooks, limited lightsticks, and holographic photocards direct from Seoul. Secure yours before they sell out.</p>
 <div class="flex gap-4 flex-wrap">
 @guest
-<a href="{{ route('login') }}" class="inline-flex items-center gap-2 font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden group" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); box-shadow: var(--shadow-floating);">
-<span class="relative z-10">Shop the Drop</span>
-<span class="material-symbols-outlined relative z-10 text-sm">arrow_forward</span>
-<div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
+<a href="{{ route('products') }}"
+   class="inline-flex items-center gap-2 font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden group"
+   style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); box-shadow: var(--shadow-floating);">
+
+    <span class="relative z-10">Shop the Drop</span>
+
+    <span class="material-symbols-outlined relative z-10 text-sm">
+        arrow_forward
+    </span>
+
+    <div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
 </a>
-<a href="#" class="inline-flex items-center gap-2 font-label-caps text-label-caps px-8 py-4 rounded-full border-2 hover:scale-[1.02] transition-all duration-300" style="color: var(--primary); border-color: var(--primary); background: transparent;">View Lookbook</a>
+
+<a href="#"
+   class="inline-flex items-center gap-2 font-label-caps text-label-caps px-8 py-4 rounded-full border-2 hover:scale-[1.02] transition-all duration-300"
+   style="color: var(--primary); border-color: var(--primary); background: transparent;">
+    View Lookbook
+</a>
+
 @else
-<button class="inline-flex items-center gap-2 font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden group" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); box-shadow: var(--shadow-floating);">
-<span class="relative z-10">Shop the Drop</span>
-<span class="material-symbols-outlined relative z-10 text-sm">arrow_forward</span>
-<div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
-</button>
-<a href="#" class="inline-flex items-center gap-2 font-label-caps text-label-caps px-8 py-4 rounded-full border-2 hover:scale-[1.02] transition-all duration-300" style="color: var(--primary); border-color: var(--primary); background: transparent;">View Lookbook</a>
+
+<a href="{{ route('products') }}"
+   class="inline-flex items-center gap-2 font-label-caps text-label-caps text-white px-8 py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden group"
+   style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); box-shadow: var(--shadow-floating);">
+
+    <span class="relative z-10">Shop the Drop</span>
+
+    <span class="material-symbols-outlined relative z-10 text-sm">
+        arrow_forward
+    </span>
+
+    <div class="absolute inset-0 bg-white/20 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out z-0"></div>
+</a>
+
+<a href="#"
+   class="inline-flex items-center gap-2 font-label-caps text-label-caps px-8 py-4 rounded-full border-2 hover:scale-[1.02] transition-all duration-300"
+   style="color: var(--primary); border-color: var(--primary); background: transparent;">
+    View Lookbook
+</a>
+
 @endguest
 </div>
 <!-- Trust badges -->

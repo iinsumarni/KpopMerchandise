@@ -65,13 +65,26 @@ require __DIR__.'/auth.php';
 use App\Http\Controllers\CartController;
 
 Route::middleware('auth')->group(function () {
-    Route::get('/cart', [CartController::class, 'index']);
-    Route::get('/cart/add/{id}', [CartController::class, 'add']);
 
-// quantity
-    Route::get('/cart/increase/{id}', [CartController::class, 'increase']);
-    Route::get('/cart/decrease/{id}', [CartController::class, 'decrease']);
-    Route::get('/cart/remove/{id}', [CartController::class, 'remove']);
-    Route::get('/cart/checkout', [CartController::class, 'checkout']);
+    // products
+    Route::view('/products', 'products')->name('products');
+
+    // cart
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+
+    // add to cart
+    Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
+
+    // quantity
+    Route::get('/cart/increase/{id}', [CartController::class, 'increase'])->name('cart.increase');
+
+    Route::get('/cart/decrease/{id}', [CartController::class, 'decrease'])->name('cart.decrease');
+
+    // remove
+    Route::get('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+    // checkout
+    Route::get('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+    
 });
 
